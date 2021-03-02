@@ -107,7 +107,7 @@ type Channel struct {
 
 // IsClosed indicate closed by developer
 func (ch *Channel) IsClosed() bool {
-	return (atomic.LoadInt32(&ch.closed) == 1)
+	return atomic.LoadInt32(&ch.closed) == 1
 }
 
 // Close ensure closed flag set
